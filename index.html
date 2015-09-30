@@ -390,19 +390,35 @@ var christophe = {
             <h1>Modules</h1>
           </section>
 
-          <section>
-            <h2>FIXME</h2>
+          <section id="why-modules">
+            <h2>Dis papa pourquoi ?</h2>
 
-  -> Déjà évoqué dans les Source Maps
-  -> Indispensable pour les mêmes raisons que côté backend
-  -> Ne pas confondre avec Bower, qui simplifie juste la récup de deps front
-  -> AMD comateux, CommonJS dominant, mais en vrai on passe à ES6 et ses modules natifs
-  -> Transition facile avec des outils comme SystemJS
-  -> Par ailleurs, très très grosse tendance : npm all the things!
-    -> Exclut (hélas) Brunch
-    -> A émergé notamment grâce à Browserify et au Universal (ex. Isomorphic) JS
-    -> Webpack au top :-)
-    -> JSPM, ce héros
+            <p>Pour les mêmes raisons que côté back :<br/><strong>modularité, découpage, dépendances explicites, chargement à la demande</strong>, etc.</p>
+
+            <h3>Indispensable</h3>
+
+            <p>…pour arrêter <strong>l’amateurisme crasse</strong> des tas de balises <code>&lt;script&gt;</code> dégueulasses jetées dans un ordre magique sur la page, avec leurs tas de requêtes synchrones bloquantes…</p>
+          </section>
+
+          <section id="modules-formats">
+            <h2>Quel format ?</h2>
+
+            <p>AMD (donc Require.js) est comateux <small>#unleashthetrolls</small></p>
+            <p><strong>CommonJS</strong> domine (Brunch, Browserify, Webpack…) mais en vrai on passe aux <a href="http://jsmodules.io/"><strong>modules natifs ES6</strong></a></p>
+            <p><strong>Transition facile</strong> en tous les cas, grâce à des tours de force techniques comme <a href="https://github.com/systemjs/systemjs">SystemJS</a></p>
+
+            <footer>Ne pas confondre avec Bower, qui simplifie juste l’installation de dépendances front</footer>
+          </section>
+
+          <section id="npm-modules">
+            <h2>npm all the things!</h2>
+
+            <p>Très, <strong>très grosse tendance</strong></p>
+            <p>A émergé notamment grâce à des outils comme <strong>Browserify</strong> et le mouvement <strong>Universal JS</strong><sup>1</sup></p>
+            <p><a href="https://webpack.github.io/">Webpack</a> est vraiment au top dans ce contexte</p>
+            <p><a href="http://jspm.io">JSPM</a> est une énorme tuerie, en complément</p>
+
+            <footer><sup>1</sup> anciemment « Isomorphic JS »</footer>
           </section>
         </section> <!-- #modules -->
 
