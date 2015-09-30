@@ -1,0 +1,10 @@
+{
+  "name": "pw2015-workspaces-demo",
+  "version": "1.0.0",
+  "author": "Christophe Porteneuve <christophe@delicious-insights.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "fb-flo": "^0.4.0"
+  }
+}
