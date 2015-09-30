@@ -549,7 +549,7 @@ em span[lang], em strong[lang] { font-style: normal; }
   max-height: none;
 }
 
-.reveal section img.schema {
+.reveal section img {
   border: none;
   box-shadow: none;
 }
@@ -650,6 +650,10 @@ b.right::after {
   margin-top: 0.8em;
 }
 
+.reveal p + p {
+  margin-top: 0.8em;
+}
+
 .reveal table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 90%; }
 .reveal td, .reveal th {
   padding: 0 0.2em 0.2em;
@@ -668,4 +672,15 @@ b.right::after {
 
 .reveal section.meme.present blockquote {
   display: none;
+}
+
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.two-columns > div {
+  flex-grow: 1;
+  flex-basis: 50%;
+  text-align: center;
 }

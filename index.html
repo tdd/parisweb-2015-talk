@@ -89,7 +89,7 @@ var christophe = {
           <h3>Ne clignez pas des yeux !</h3>
 
           <p>6 piliers</p>
-          <p>2 bonus</p>
+          <p>3 bonus</p>
           <p>Plein de démos</p>
           <p>Des étoiles dans les yeux</p>
         </section>
@@ -141,7 +141,7 @@ var christophe = {
               </tbody>
             </table>
 
-            <p>Ça remonte, au bas mot, à 1995.  Y’a 20 ans.  WTF, les gens.</p>
+            <p>Comme en 1995.  <strong>Y’a 20 ans.</strong>  WTF, les gens.</p>
 
             <footer>
               <sup>1</sup> Source : Wanegaine Institute™ Of Wing-It Statistics •
@@ -165,48 +165,123 @@ var christophe = {
           <section id="why-live-edit">
             <h2>Pourquoi c’est bien ?</h2>
 
-            -> pour tirer parti de l'état courant de l'état courant de la runtime (complétion réelle, introspection, débogage pas à pas, etc.)
+            <p>
+              Tirer parti de <strong>l’état courant de la runtime</strong><br/>
+              (<strong>complétion réelle</strong>, introspection, débogage pas à pas…)
+            </p>
+
+            <img class="schema" src="images/01-live-editing-completion.png" height="99" width="348" alt="Un exemple de complétion réelle">
+
+            <p><strong>Feedback immédiat</strong> (on y reviendra)</p>
           </section>
 
           <section id="where-live-edit">
             <h2>Dans quels navigateurs ?</h2>
 
+            <p><strong>Desktop : tous</strong> ceux dont on a besoin (IE8+, Firefox, Chrome, Safari, Opera…)</p>
+            <p><strong>Mobile :</strong> souvent connectable via l’équivalent desktop</p>
 
-            -> Possible partout en desktop (IE8+ mais même avant en plus galère, FF sans avoir besoin de Firebug, Chrome, Safari, Opera…), souvent à distance sur mobile.
+            <img class="schema" src="images/02-live-editing-mobile-too.png" height="279" width="931" alt="Vue partielle du débogage distant d’un périphérique Android grâce aux outils développeurs de Google Chrome">
           </section>
 
           <section id="what-live-edit">
             <h2>Ça marche pour quoi ?</h2>
 
-            -> HTML… en mode « assisté »
-            -> Hot-swapping CSS (partout)
-            -> Hot-swapping JS (Chrome seulement, bientôt FF et Edge) : démo avec animation + code de dessin ?
+            <p><strong>HTML</strong> en mode « assisté »</p>
+
+            <img class="schema" src="images/03-live-editing-html.png" height="109" width="655" alt="Modification assistée de HTML dans Chrome Developer Tools">
+
+            <p><strong>CSS</strong> en assisté ou texte brut, <em>hot-swapped</em>.</p>
+
+            <img class="schema" src="images/04-live-editing-css.gif" height="147" width="594" alt="Modification assistée de CSS dans Chrome Developer Tools">
+
+            <p><strong>JavaScript</strong> en texte brut, <em>hot-swapped<sup>1</sup></em></p>
+
+            <!-- FIXME: image -->
+
+            <footer><sup>1</sup> sur Chrome ; prochainement Firefox et MS Edge</footer>
+          </section>
+
+          <section id="what-live-edit-2">
+            <h2>Ça marche pour quoi ?</h2>
+
+            <p><strong>JavaScript</strong> en texte brut, <em>hot-swapped<sup>1</sup></em></p>
+
+            <img src="images/05-live-editing-js.gif" height="223" width="834" alt="Modification hot-swapped de JS dans Chrome Developer Tools">
+
+            <footer><sup>1</sup> sur Chrome ; prochainement Firefox et MS Edge</footer>
           </section>
 
           <section id="workspaces">
             <h2>Workspaces</h2>
 
-            <p>FIXME</p>
+            <p>Sauve sur disque vos changements faits dans Chrome</p>
+            <p>Mapping URLs ⬌ chemins sur disque</p>
+
+            <img src="images/06-live-editing-workspaces.png" height="120" width="626" alt="Activation d’un workspace dans Chrome Developer Tools">
+
+            <p>On peut utiliser les Dev Tools comme un EDI, si on veut !</p>
           </section>
 
-          <section>
+          <section id="bonus-1-1">
             <h3>Bonus n°1.1</h3>
             <h2>Maîtriser ses Dev Tools</h2>
             <h1>pour de vrai</h1>
+          </section>
 
-          -> Comparaison Office (5% utilisé)
-          -> Excellentes ressources : Discover DevTools, doc officielle Google, chaînes Google Developers / Google Chrome Developers, HTML5Rocks Tutorials, MDN, hacks.mozilla.com, comptes Twitter à suivre…
-          -> Quitte à basculer d'un browser à l'autre pour avoir le meilleur outil ponctuel
-          -> Tonne de raccourcis clavier
-          -> Derniers DevTools : on peut même réordonner les onglets
+          <section id="own-your-dev-tools">
+            <h3>Apprenez, bon sang !</h3>
+
+            <p>
+              Les Dev Tools, c’est comme MS Office :<br/>
+              <strong>tout le monde s’en sert… à 5%.</strong>
+            </p>
+
+            <p>
+              Cours interactif gratuit <a href="http://discover-devtools.codeschool.com/">Discover DevTools</a>,
+              excellentissime <a href="https://developers.google.com/web/tools/chrome-devtools/?hl=en">manuel officiel</a>,
+              chaînes YouTube <a href="https://www.youtube.com/user/ChromeDevelopers/playlists?view=1&amp;sort=dd">Chrome Devs</a>,
+              tutos sur <a href="http://www.html5rocks.com/fr/">HTML5 Rocks</a>,
+              sur le <a href="https://developer.mozilla.org/fr/docs/Outils">MDN</a> ou <a href="https://hacks.mozilla.org/">Hacks Mozilla</a>,
+              <a href="https://twitter.com/MozDevNet">tout</a> <a href="https://twitter.com/MSEdgeDevTools">plein</a> de <a href="https://twitter.com/ChromeDevTools">comptes</a> <a href="https://twitter.com/paul_irish">Twitter</a> <a href="https://twitter.com/addyosmani">à</a> <a href="https://twitter.com/umaar">suivre</a>…
+            </p>
+
+            <p>Utilisez le navigateur le plus pratique à un instant <em>t</em> !</p>
+
+            <p>Tout ça est doté d’une <a href="https://developer.mozilla.org/fr/docs/Outils/Raccourcis_claviers">tonne</a> de <a href="https://developers.google.com/web/tools/iterate/inspect-styles/shortcuts">raccourcis</a> <a href="https://msdn.microsoft.com/fr-fr/library/dn322041(v=vs.85).aspx">clavier</a>, pour aller encore plus vite : consultez-les !</p>
+
+            <footer>Dans les derniers Dev Tools de Chrome, on peut même réordonner nos onglets…</footer>
           </section>
 
           <section>
             <h3>Bonus n°1.2</h3>
             <h2>DevTools dédiés</h2>
+            <h4>Encore plus mieux que mieux</h4>
+          </section>
 
-          -> React, Angular, Ember, Redux, client REST…
-          -> DevTools Extensions (https://chrome.google.com/webstore/category/ext/11-web-development)
+          <section>
+            <div class="two-columns">
+              <div>
+                <h4>React</h4>
+                <img src="images/07-dedicated-devtools-react.png" alt="Outil de dev dédié React dans Chrome">
+              </div>
+              <div>
+                <h4>Angular</h4>
+                <img src="images/08-dedicated-devtools-angular.png" alt="Outil de dev dédié React dans Chrome">
+              </div>
+              <div>
+                <h4>Ember</h4>
+                <img src="images/09-dedicated-devtools-ember.png" alt="Outil de dev dédié Ember dans Chrome">
+              </div>
+              <div>
+                <h4>Redux</h4>
+                <img src="images/10-dedicated-devtools-redux.gif" alt="Outil de dev dédié Redux dans Chrome">
+              </div>
+            </div>
+
+            <p>
+              Extensions outils de dev pour <a href="https://chrome.google.com/webstore/category/ext/11-web-development">Chrome</a>, <a href="https://addons.mozilla.org/en-US/firefox/extensions/web-development/">Firefox</a>, etc.
+            </p>
           </section>
         </section> <!-- #live-editing -->
 
