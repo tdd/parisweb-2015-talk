@@ -14,6 +14,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:700|Source+Sans+Pro:300,600,300italic,600italic|Source+Code+Pro:400,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/animate.min.css">
 		<link rel="stylesheet" href="css/theme/sky.css" id="theme-basis">
@@ -55,7 +56,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Le dev front à Mach 1 au quotidien</h1>
+					<h1>Le dev front<br/>à Mach 1<br/>au quotidien</h1>
 					<h3>Promis, ça ne fait pas mal</h3>
 					<p>
 						<small>Une présentation de <a href="http://tddsworld.com/">Christophe Porteneuve</a> à <a href="http://www.paris-web.fr/2015/">Paris Web 2015</a></small>
@@ -63,7 +64,7 @@
 				</section>
 
 				<section id="whoami">
-					<h2>TÉKITOA</h2>
+					<h2>Tékitoa</h2>
 
 					<pre><code data-trim class="javascript">
 var christophe = {
@@ -87,68 +88,273 @@ var christophe = {
           <h2>En 30 minutes</h2>
           <h3>Ne clignez pas des yeux !</h3>
 
-          <p>FIXME</p>
+          <p>6 piliers</p>
+          <p>2 bonus</p>
+          <p>Plein de démos</p>
+          <p>Des étoiles dans les yeux</p>
         </section>
 
-				<section data-state="theme-color-blue-yellow">
-					<section id="fixme1">
-						<h1>FIXME1</h1>
+        <section data-state="theme-color-silver-green">
+					<section id="frontdev-today">
+						<h1>État des lieux</h1>
+            <h3>du dev front aujourd’hui</h3>
 					</section>
 
-          <section id="fixme1-1">
-            <h2>FIXME 1.1</h2>
+          <section id="ssrr">
+            <h2>Le bon vieux cycle SSRR</h2>
+            <h4>(Save, Switch, Reload, Replay)</h4>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Période</th>
+                  <th>Temps perdu<sup>1</sup></th>
+                  <th>Coût / pers.<sup>2</sup></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Heure</th>
+                  <td>5 minutes</td>
+                  <td>2,47 €</td>
+                </tr>
+                <tr>
+                  <th>Jour</th>
+                  <td>39 minutes</td>
+                  <td>19,23 €</td>
+                </tr>
+                <tr>
+                  <th>Semaine<sup>2</sup></th>
+                  <td>3 heures 15 minutes</td>
+                  <td>96,15 €</td>
+                </tr>
+                <tr>
+                  <th>Mois</th>
+                  <td>2 jours 2 heures 29 minutes</td>
+                  <td>416,67 €</td>
+                </tr>
+                <tr>
+                  <th>An<sup>3</sup></th>
+                  <td>19 jours 1 heure 20 minutes</td>
+                  <td><strong>4 519,23 €</strong></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>Ça remonte, au bas mot, à 1995.  Y’a 20 ans.  WTF, les gens.</p>
+
+            <footer>
+              <sup>1</sup> Source : Wanegaine Institute™ Of Wing-It Statistics •
+              <sup>2</sup> Base 2,5K€ nets en 39h •
+              <sup>3</sup> 5 <abbr title="semaines">sem.</abbr> <abbr title="Congés Payés">CP</abbr>
+            </footer>
+          </section>
+
+          <section id="dont-waste-my-time" class="meme" data-background="memes/not-waste-my-time.jpg">
+            <blockquote>If you could go ahead and not waste my time, that would be great.</blockquote>
+          </section>
+				</section> <!-- #frontdev-today -->
+
+        <section data-state="theme-color-blue-yellow">
+          <section id="live-edit">
+            <h3>Pilier n°1</h3>
+            <h1>Édition live</h1>
+            <h2>dans le navigateur</h2>
+          </section>
+
+          <section id="why-live-edit">
+            <h2>Pourquoi c’est bien ?</h2>
+
+            -> pour tirer parti de l'état courant de l'état courant de la runtime (complétion réelle, introspection, débogage pas à pas, etc.)
+          </section>
+
+          <section id="where-live-edit">
+            <h2>Dans quels navigateurs ?</h2>
+
+
+            -> Possible partout en desktop (IE8+ mais même avant en plus galère, FF sans avoir besoin de Firebug, Chrome, Safari, Opera…), souvent à distance sur mobile.
+          </section>
+
+          <section id="what-live-edit">
+            <h2>Ça marche pour quoi ?</h2>
+
+            -> HTML… en mode « assisté »
+            -> Hot-swapping CSS (partout)
+            -> Hot-swapping JS (Chrome seulement, bientôt FF et Edge) : démo avec animation + code de dessin ?
+          </section>
+
+          <section id="workspaces">
+            <h2>Workspaces</h2>
 
             <p>FIXME</p>
           </section>
-				</section> <!-- #fixme1 -->
+
+          <section>
+            <h3>Bonus n°1.1</h3>
+            <h2>Maîtriser ses Dev Tools</h2>
+            <h1>pour de vrai</h1>
+
+          -> Comparaison Office (5% utilisé)
+          -> Excellentes ressources : Discover DevTools, doc officielle Google, chaînes Google Developers / Google Chrome Developers, HTML5Rocks Tutorials, MDN, hacks.mozilla.com, comptes Twitter à suivre…
+          -> Quitte à basculer d'un browser à l'autre pour avoir le meilleur outil ponctuel
+          -> Tonne de raccourcis clavier
+          -> Derniers DevTools : on peut même réordonner les onglets
+          </section>
+
+          <section>
+            <h3>Bonus n°1.2</h3>
+            <h2>DevTools dédiés</h2>
+
+          -> React, Angular, Ember, Redux, client REST…
+          -> DevTools Extensions (https://chrome.google.com/webstore/category/ext/11-web-development)
+          </section>
+        </section> <!-- #live-editing -->
 
 				<section data-state="theme-color-forest-yellow">
-          <section id="fixme2">
-            <h1>FIXME2</h1>
+          <section id="instant-feedback">
+            <h3>Pilier n°2</h3>
+            <h1>Feedback instantané</h1>
+            <h2>sur modifs extérieures</h2>
           </section>
 
-          <section id="fixme2-1">
-            <h2>FIXME 2.1</h2>
+          <section>
+            <h2>FIXME</h2>
 
-            <p>FIXME</p>
+            -> CSS = hot-swapping facile, programmatique, plein de solutions (LiveReload, BrowserSync, fb-flo, Brackets, etc.)
+            -> JS = hot reloading : BrowserSync?, fb-flo, mais plus loin Webpack HMR + MHL / RHL…
           </section>
-        </section> <!-- #fixme2 -->
+
+          <section>
+            <h3>Bonus n°2.1</h3>
+            <h2>Synchro multi-devices</h2>
+
+            -> BrowserSync et son Ghost Mode, par exemple.
+          </section>
+        </section> <!-- #instant-feedback -->
 
         <section data-state="theme-color-asphalt-orange">
-          <section id="fixme3">
-            <h1>FIXME3</h1>
+          <section id="source-maps">
+            <h3>Pilier n°3</h3>
+            <h1>Source Maps</h1>
           </section>
 
-          <section id="fixme3-1">
-            <h2>FIXME 3.1</h2>
+          <section>
+            <h2>FIXME</h2>
 
-            <p>FIXME</p>
+            -> Découpler le code source / dev (langage, découpage / enrobage, lisibilité…) et celui exécuté (bundle CSS/JS unique voire minifié)
+            -> Seul frein en dev : le code interprété n'est pas le source original ! SM = mapping entre les deux.
+            -> v3 02/2011 (bientôt 5 ans). FF23+, Chrome (26+?), IE11+, Saf (6+?)
+            -> Multi-niveau.  Ex. : ES6 files -> ES5 files -> ES5 bundle -> ES5 minified bundle
+            -> Plus d'excuse pour ne pas utiliser le top en dev !
           </section>
-				</section> <!-- #fixme3 -->
+				</section> <!-- #source-maps -->
 
-				<section id="trainings" data-state="theme-color-mint-beige">
-					<h2>Envie d’en savoir plus ?</h2>
+        <section data-state="theme-color-mint-beige">
+          <section id="automate">
+            <h3>Pilier n°4</h3>
+            <h1>Automatisation</h1>
+          </section>
 
-          <p>
-            On fait des <strong>super formations de ouf</strong> sur<br/>
-            <a href="http://www.git-attitude.fr/git-total/">Git</a>,
-            <a href="http://www.js-attitude.fr/js-total/">JavaScript et le dev web front</a> et
-            <a href="http://www.js-attitude.fr/node-js/">Node.js</a>.
-          </p>
+          <section>
+            <h2>FIXME</h2>
 
-          <br>
+            -> On a aujourd'hui de véritables chaînes de build : le dev front s'est énormément industrialisé ces dernières années.
+            -> Beaucoup de tâches fréquentes, voire ultra-récurrentes, rébarbatives et error-prone à la main
+            -> Grunt a popularisé le truc, mais trop mal branlé, est déjà largement sur la fin.
+            -> Principaux acteurs aujourd'hui : Gulp (générique, a néanmoins pas mal de problèmes) et Webpack (bundling)
+            -> Browserify encore bien populaire, mais nécessite pas mal de code / CLI, Webpack et JSPM lui bouffent son lunch
+            -> Brunch longtemps l'outsider qui défonce tout, mais a raté sa prise en charge npm (on y reviendra), condamné à la marge :'-(.
+          </section>
+        </section> <!-- #automate -->
 
-          <p>Et ce qui est <strong>encore plus cool</strong>, c’est que pour l’auditoire Paris Web, c’est <strong>&minus;15%</strong> jusqu’à fin janvier avec votre n° d’inscription</p>
-				</section>
-<!--
-				<section data-state="theme-color-silver-green">
-					<h2>silver-green</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta rem, similique optio nam recusandae, magni consequatur id omnis dolorum, reprehenderit repellat distinctio quisquam cumque accusantium atque vel animi neque porro.</p>
-				</section>
--->
+        <section data-state="theme-color-blue-yellow">
+          <section id="modules">
+            <h3>Pilier n°5</h3>
+            <h1>Modules</h1>
+          </section>
+
+          <section>
+            <h2>FIXME</h2>
+
+  -> Déjà évoqué dans les Source Maps
+  -> Indispensable pour les mêmes raisons que côté backend
+  -> Ne pas confondre avec Bower, qui simplifie juste la récup de deps front
+  -> AMD comateux, CommonJS dominant, mais en vrai on passe à ES6 et ses modules natifs
+  -> Transition facile avec des outils comme SystemJS
+  -> Par ailleurs, très très grosse tendance : npm all the things!
+    -> Exclut (hélas) Brunch
+    -> A émergé notamment grâce à Browserify et au Universal (ex. Isomorphic) JS
+    -> Webpack au top :-)
+    -> JSPM, ce héros
+          </section>
+        </section> <!-- #modules -->
+
+        <section data-state="theme-color-forest-yellow">
+          <section id="tests">
+            <h3>Pilier n°6</h3>
+            <h1>Tests automatisés</h1>
+            <h2>et parallèles</h2>
+          </section>
+
+          <section>
+            <h2>FIXME</h2>
+
+  -> Industriel / quali = tests complets (95%+)
+  -> L'écosystème de tests auto sans doute le plus avancé et riche qui soit, toutes technos confondues
+  -> Briques : Assertions, Mocking/Stubbing, Harnais, Runners, Coverage Reporters
+  -> Roi de l'assertion : Chai et ses plugins
+  -> Roi du mocking/stubbing : SinonJS
+  -> Principaux harnais : Mocha et Tape (Jasmine en perte de vitesse, QUnit comateux, JSTest [trop] à la marge)
+  -> Principaux runners : Karma + SaaS (BrowserStack et Sauce)
+  -> Principaux CR : Istanbul et variantes ES6+ (Isparta) (Blanket sur la fin, moins pratique/utile)
+
+          </section>
+        </section> <!-- #tests -->
+
+        <section data-state="theme-color-asphalt-orange">
+          <section id="es6plus">
+            <h3>Pilier n°7</h3>
+            <h1>ES6+</h1>
+          </section>
+
+          <section>
+            <h2>FIXME</h2>
+
+  -> C'est là, ça y est, c'est utilisable MAINTENANT
+  -> Énormes gains de productivité, de performance et de fiabilité à la clé, mais aussi…
+  -> Énormes gains de PLAISIR
+  -> Pour tout savoir là-dessus, venez à mon atelier de Samedi ou à ma pres à Blend ! ;-)
+          </section>
+        </section> <!-- #es6plus -->
+
+        <section data-state="theme-color-mint-beige">
+          <section id="conclusion">
+            <h2>En conclusion</h2>
+
+            -> ARRÊTEZ DE GASPILLER VOTRE TEMPS AVEC VOS SILEX
+            -> REPRENEZ DU PLAISIR EN CRÉANT PLUTÔT QU'EN ATTENDANT APRÈS VOS OUTILS
+
+          </section>
+
+          <section id="trainings">
+            <h2>Envie d’en savoir plus ?</h2>
+
+            <p>
+              On fait des <strong>super formations de ouf</strong> sur<br/>
+              <a href="http://www.git-attitude.fr/git-total/">Git</a>,
+              <a href="http://www.js-attitude.fr/js-total/">JavaScript et le dev web front</a> et
+              <a href="http://www.js-attitude.fr/node-js/">Node.js</a>.
+            </p>
+
+            <br>
+
+            <p>Et ce qui est <strong>encore plus cool</strong>, c’est que pour l’auditoire Paris Web, c’est <strong>&minus;15%</strong> jusqu’à fin janvier avec votre n° d’inscription</p>
+          </section>
+        </section>
+
 				<section>
 					<h1>Merci !</h1>
-          <h3>Et que JS soit avec vous</h3>
+          <h3>Et que le web soit avec vous</h3>
           <br>
 					<p>Christophe Porteneuve</p>
           <p><a href="https://twitter.com/porteneuve">@porteneuve</a></p>

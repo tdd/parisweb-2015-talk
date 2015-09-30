@@ -1,51 +1,4 @@
 @font-face {
-  font-family: 'Canter';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Canter Light"), url("../fonts/Canter Light.otf");
-}
-
-@font-face {
-  font-family: 'Canter';
-  font-style: normal;
-  font-weight: bold;
-  src: local("Canter Bold"), url("../fonts/Canter Bold.otf");
-}
-
-@font-face {
-  font-family: 'Canter Shadow';
-  font-style: normal;
-  src: local("Canter Bold Shadow"), url("../fonts/Canter Bold Shadow.otf");
-}
-
-@font-face {
-  font-family: 'Canter Strips';
-  font-style: normal;
-  src: local("Canter Bold Strips"), url("../fonts/Canter Bold Strips.otf");
-}
-
-@font-face {
-  font-family: 'Dense';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Dense"), local("Dense-Regular"), url("../fonts/Dense-Regular.otf");
-}
-
-@font-face {
-  font-family: 'Sabado';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sabado"), local("Sabado Regular"), url("../fonts/Sabado Regular.otf");
-}
-
-@font-face {
-  font-family: 'Sabado';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Sabado Italic"), url("../fonts/Sabado Italic.otf");
-}
-
-@font-face {
   font-family: 'Track';
   font-style: normal;
   font-weight: 400;
@@ -59,9 +12,21 @@
   src: local("Track Italic"), url("../fonts/Track Italic.otf");
 }
 
-.reveal h1, .reveal h2, .reveal h3, .reveal h2 + h4 {
-  font-family: Track;
-  letter-spacing: 0.01em;
+.reveal {
+  font-family: "Source Sans", sans-serif;
+  letter-spacing: 0;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: Merriweather;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1em;
+}
+
+.reveal tt, .reveal code, .reveal pre {
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, monospace;
+  line-height: 1.3em;
 }
 
 /* SILVER GREEN */
@@ -571,7 +536,7 @@ span[lang], strong[lang] { font-style: italic; }
 em span[lang], em strong[lang] { font-style: normal; }
 
 .reveal h2 { font-size: 1.95em; }
-.reveal h2 + h4 { margin-top: -0.6em; font-size: 0.8em; }
+.reveal h2 + h4 { margin-top: -0.3em; font-size: 0.8em; }
 .reveal p code, .reveal li code { color: #4169e1; }
 
 .reveal pre {
@@ -616,10 +581,13 @@ em span[lang], em strong[lang] { font-style: normal; }
   color: black;
 }
 
+.reveal sup { font-size: 60%; }
+
 .reveal section > footer {
   margin-top: 2em;
-  font-size: 70%;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 60%;
+  opacity: 0.8;
+  /*color: rgba(255, 255, 255, 0.8);*/
 }
 
 .reveal li + li { margin-top: 0.5em; }
@@ -672,4 +640,32 @@ b.right::after {
 #qrcode {
   border: none;
   border-radius: 1em;
+}
+
+.reveal h3 + h1 {
+  margin-top: 0.4em;
+}
+
+.reveal h3 + h2 {
+  margin-top: 0.8em;
+}
+
+.reveal table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 90%; }
+.reveal td, .reveal th {
+  padding: 0 0.2em 0.2em;
+}
+.reveal table > thead > tr > th {
+  border: 2px solid silver;
+  border-width: 2px 0;
+}
+.reveal table > tbody > tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#ssrr tr > td:last-child, #ssrr tr > th:last-child {
+  text-align: right;
+}
+
+.reveal section.meme.present blockquote {
+  display: none;
 }
