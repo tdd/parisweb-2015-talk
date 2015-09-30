@@ -536,7 +536,7 @@ span[lang], strong[lang] { font-style: italic; }
 em span[lang], em strong[lang] { font-style: normal; }
 
 .reveal h2 { font-size: 1.95em; }
-.reveal h2 + h4 { margin-top: -0.3em; font-size: 0.8em; }
+.reveal h2 + h4 { margin-top: -0.3em; }
 .reveal p code, .reveal li code { color: #4169e1; }
 
 .reveal pre {
@@ -587,6 +587,7 @@ em span[lang], em strong[lang] { font-style: normal; }
   margin-top: 2em;
   font-size: 60%;
   opacity: 0.8;
+  line-height: 1.4em
   /*color: rgba(255, 255, 255, 0.8);*/
 }
 

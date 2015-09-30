@@ -7,7 +7,8 @@ TRENTE MINUTES
 
 > Remplir le contenu (liens, snapshots, démos)
 
-- Planifier les démos précisément (profil Chrome dédié, avec les bonnes extensions, un histo 100% clean et des favs)
 - Tag GA pour gh-pages et MàJ index.html
 - Synchro branche gh-pages (hook pre-push ?!)
 - Publication gh-pages
+
+- Planifier les démos précisément (profil Chrome dédié, avec les bonnes extensions, un histo 100% clean et des favs)

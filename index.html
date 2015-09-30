@@ -253,13 +253,13 @@ var christophe = {
             <footer>Dans les derniers Dev Tools de Chrome, on peut même réordonner nos onglets…</footer>
           </section>
 
-          <section>
+          <section id="bonus-1-2">
             <h3>Bonus n°1.2</h3>
             <h2>DevTools dédiés</h2>
             <h4>Encore plus mieux que mieux</h4>
           </section>
 
-          <section>
+          <section id="dedicated-devtools">
             <div class="two-columns">
               <div>
                 <h4>React</h4>
@@ -293,17 +293,42 @@ var christophe = {
           </section>
 
           <section>
-            <h2>FIXME</h2>
+            <h2>« Extérieures ? »</h2>
 
-            -> CSS = hot-swapping facile, programmatique, plein de solutions (LiveReload, BrowserSync, fb-flo, Brackets, etc.)
-            -> JS = hot reloading : BrowserSync?, fb-flo, mais plus loin Webpack HMR + MHL / RHL…
+            <p>Oui, genre faites depuis un éditeur / EDI externe au navigateur, quoi.</p>
+            <p>Et ce, évidemment, indépendamment de l’éditeur retenu.</p>
           </section>
 
-          <section>
+          <section id="css-notifs">
+            <h2>Côté CSS</h2>
+
+            <p>Tous les navigateurs autorisent la prise en charge <strong>à la volée, programmatique</strong>, d’une <strong>feuille de style mise à jour</strong> : il suffit donc d’avoir un script dans la page (ou une extension) qui soit notifiée par l’extérieur.</p>
+
+            <p>Pléthore de solutions :<br/>LiveReload (bleark), <a href="https://facebook.github.io/fb-flo/">fb-flo</a> (sympa), <a href="http://www.browsersync.io/">BrowserSync</a> (yay !)…</p>
+
+            <p>Présent aussi dans du dédié : Brackets, WebStorm…</p>
+          </section>
+
+          <section id="js-notifs">
+            <h2>Côté JS</h2>
+
+            <h4>Certains l’aiment chaud</h4>
+
+            <p>Si la runtime permet le <strong>hot-swap</strong> : <strong>au top</strong>.  Mais pour le moment, ça n’est vrai que pour v8 (Chrome, Safari, Opera, Node.js).</p>
+            <p>Sinon, on devra <strong>recharger</strong> la page / le programme (bon, certes, automatiquement).</p>
+
+            <h4>Quels outils ?</h4>
+
+            <p><a href="http://www.browsersync.io/">BrowserSync</a> toujours, partout (mais sans hot-swap…), <a href="https://facebook.github.io/fb-flo/">fb-flo</a> (Chrome seulement…), <a href="https://webpack.github.io/">Webpack</a> <a href="https://github.com/jlongster/monkey-hot-loader">trituré</a> (toutes v8).</p>
+          </section>
+
+          <section id="bonus-2-1">
             <h3>Bonus n°2.1</h3>
             <h2>Synchro multi-devices</h2>
 
-            -> BrowserSync et son Ghost Mode, par exemple.
+            <p><a href="http://www.browsersync.io/">BrowserSync</a> brille aussi par son <strong>Ghost Mode</strong>, qui répercute la plupart des <strong>manips interactives</strong> d’un navigateur vers tous les autres connectés au même serveur.</p>
+
+            <p>Idéal pour <strong>tester en parallèle</strong> le comportement d’une même page sur <strong>plusieurs clients</strong> (dont mobiles, TVs, consoles…)</p>
           </section>
         </section> <!-- #instant-feedback -->
 
@@ -313,32 +338,49 @@ var christophe = {
             <h1>Source Maps</h1>
           </section>
 
-          <section>
-            <h2>FIXME</h2>
+          <section id="source-maps-details">
+            <h2>Source Maps</h2>
 
-            -> Découpler le code source / dev (langage, découpage / enrobage, lisibilité…) et celui exécuté (bundle CSS/JS unique voire minifié)
-            -> Seul frein en dev : le code interprété n'est pas le source original ! SM = mapping entre les deux.
-            -> v3 02/2011 (bientôt 5 ans). FF23+, Chrome (26+?), IE11+, Saf (6+?)
-            -> Multi-niveau.  Ex. : ES6 files -> ES5 files -> ES5 bundle -> ES5 minified bundle
-            -> Plus d'excuse pour ne pas utiliser le top en dev !
+            <p><strong>Découple</strong> le code source en <strong>dev</strong> (langage, découpage / enrobage, lisibilité…) de celui <strong>exécuté</strong> (bundle CSS/JS unique voire minifié).</p>
+
+            <p>Super idée, mais frein potentiel : le code interprété n’est plus celui écrit : <strong>comment s’y retrouver au débogage ?</strong></p>
+
+            <p>Source Maps v3 depuis février 2011 (<strong>bientôt 5 ans</strong>).  Large prise en charge : Fx23+, Cr26+, IE11+, Saf6+…</p>
+
+            <p>Fonctionne en <strong>multi-niveaux</strong>, donc à travers <em>n</em> étapes.<br/>
+              Ex. : <strong>ES6 ⇢ ES5 ⇢ bundle unique ⇢ minification</strong>.</p>
+
+            <p><strong>Plus d’excuse</strong> pour ne pas utiliser le top en dev !</p>
           </section>
 				</section> <!-- #source-maps -->
 
         <section data-state="theme-color-mint-beige">
           <section id="automate">
             <h3>Pilier n°4</h3>
-            <h1>Automatisation</h1>
+            <h1>Automatiser</h1>
           </section>
 
-          <section>
-            <h2>FIXME</h2>
+          <section id="why-automate">
+            <h2>Automatiser, pourquoi ?</h2>
 
-            -> On a aujourd'hui de véritables chaînes de build : le dev front s'est énormément industrialisé ces dernières années.
-            -> Beaucoup de tâches fréquentes, voire ultra-récurrentes, rébarbatives et error-prone à la main
-            -> Grunt a popularisé le truc, mais trop mal branlé, est déjà largement sur la fin.
-            -> Principaux acteurs aujourd'hui : Gulp (générique, a néanmoins pas mal de problèmes) et Webpack (bundling)
-            -> Browserify encore bien populaire, mais nécessite pas mal de code / CLI, Webpack et JSPM lui bouffent son lunch
-            -> Brunch longtemps l'outsider qui défonce tout, mais a raté sa prise en charge npm (on y reviendra), condamné à la marge :'-(.
+            <p>On a aujourd'hui de véritables <strong>chaînes d’assemblage</strong> : le développement web, front comme back, s’est <strong>énormément industrialisé</strong> ces dernières années.</p>
+
+            <p>Beaucoup de tâches fréquentes, voire ultra-récurrentes, rébarbatives et faciles à gaufrer à la main.</p>
+          </section>
+
+          <section id="tools-to-automate">
+            <h2>Quels outils pour automatiser ?</h2>
+
+            <p><strong>Grunt</strong> a certes popularisé le truc, mais trop mal branlé ; déjà largement sur le retour.</p>
+
+            <p>Principaux acteurs aujourd'hui :</p>
+
+            <p><a href="http://gulpjs.com/"><strong>Gulp</strong></a> (générique, a néanmoins pas mal de problèmes)</p>
+            <p><a href="https://webpack.github.io/"><strong>Webpack</strong></a> (assemblage surtout, très avancé)</p>
+
+            <footer>
+              Browserify encore populaire, mais nécessite pas mal de code / CLI…  Du coup Webpack et JSPM lui bouffent son lunch. Quant à Brunch, longtemps l’outsider qui défonce tout, il a raté sa prise en charge npm (on y reviendra), et devient condamné à la marge, où il retrouve Broccoli et d’autres :'-(</p>
+            </footer>
           </section>
         </section> <!-- #automate -->
 
