@@ -416,7 +416,7 @@ var christophe = {
             <p>Très, <strong>très grosse tendance</strong></p>
             <p>A émergé notamment grâce à des outils comme <strong>Browserify</strong> et le mouvement <strong>Universal JS</strong><sup>1</sup></p>
             <p><a href="https://webpack.github.io/">Webpack</a> est vraiment au top dans ce contexte</p>
-            <p><a href="http://jspm.io">JSPM</a> est une énorme tuerie, en complément</p>
+            <p><a href="#fixme">JSPM</a> est une énorme tuerie, en complément</p>
 
             <footer><sup>1</sup> anciemment « Isomorphic JS »</footer>
           </section>
@@ -429,18 +429,22 @@ var christophe = {
             <h2>et parallèles</h2>
           </section>
 
-          <section>
-            <h2>FIXME</h2>
+          <section id="tests-ecosystem">
+            <h2>Un écosystème sans pareil</h2>
 
-  -> Industriel / quali = tests complets (95%+)
-  -> L'écosystème de tests auto sans doute le plus avancé et riche qui soit, toutes technos confondues
-  -> Briques : Assertions, Mocking/Stubbing, Harnais, Runners, Coverage Reporters
-  -> Roi de l'assertion : Chai et ses plugins
-  -> Roi du mocking/stubbing : SinonJS
-  -> Principaux harnais : Mocha et Tape (Jasmine en perte de vitesse, QUnit comateux, JSTest [trop] à la marge)
-  -> Principaux runners : Karma + SaaS (BrowserStack et Sauce)
-  -> Principaux CR : Istanbul et variantes ES6+ (Isparta) (Blanket sur la fin, moins pratique/utile)
+            <p>JS <strong>industriel</strong> = excellent corpus de tests</p>
+            <p>On a sans doute l’écosystème de tests <strong>le plus avancé</strong>, toutes technologies confondues</p>
+            <p>Des solutions haut de gamme pour les assertions (<a href="http://chaijs.com/">Chai</a> et ses plugins), le mocking (notamment <a href="#fixme">SinonJS</a>), les harnais (<a href="https://mochajs.org/">Mocha</a>, <a href="#fixme">Tape</a>…), les runners (<a href="http://karma-runner.github.io/">Karma</a>, <a href="https://www.browserstack.com/">BrowserStack</a>, <a href="https://saucelabs.com/javascript/">Sauce</a>), la mesure de couverture (<a href="#fixme">Istanbul</a>, <a href="https://github.com/douglasduteil/isparta">Isparta</a>)…</p>
 
+            <p><strong>Critique</strong> pour la CI (<strong>intégration continue</strong>), le CD (<strong>déploiement continu</strong>) et les <strong>builds incassables</strong>.</p>
+          </section>
+
+          <section id="tests-live">
+            <h2>Test-first ?</h2>
+
+            <p>Approche qui a largement fait ses preuves, mais… il faut que les tests <strong>aillent vite</strong>.  Très vite, pour être confortable.</p>
+
+            <p>Ça tombe bien : tester du JS, front comme back, en <strong>feedback temps réel</strong> (watchers), peut être <strong>extrêmement rapide</strong>, notamment grâce aux <strong>mockings I/O et DOM</strong> et au <strong>pur fonctionnel</strong> (qui rend l’isolation triviale, ex. <a href="http://rackt.github.io/redux/">Redux</a>).</p>
           </section>
         </section> <!-- #tests -->
 
