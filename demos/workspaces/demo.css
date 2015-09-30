@@ -1,0 +1,13 @@
+body {
+  font-family: Merriweather, Georgia, serif;
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+h1 {
+  color: green;
+}
+
+p {
+  line-height: 1.5em;
+}
